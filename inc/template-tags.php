@@ -5,14 +5,14 @@
  * This file contains several template functions which are used to print out specific HTML markup
  * in the theme. You can override these template functions within your child theme.
  *
- * @package Tortuga
+ * @package test
  */
 
-if ( ! function_exists( 'tortuga_site_logo' ) ) :
+if ( ! function_exists( 'test_site_logo' ) ) :
 /**
  * Displays the site logo in the header area
  */
-function tortuga_site_logo() {
+function test_site_logo() {
 
 	if ( function_exists( 'the_custom_logo' ) ) {
 
@@ -24,14 +24,14 @@ function tortuga_site_logo() {
 endif;
 
 
-if ( ! function_exists( 'tortuga_site_title' ) ) :
+if ( ! function_exists( 'test_site_title' ) ) :
 /**
  * Displays the site title in the header area
  */
-function tortuga_site_title() {
+function test_site_title() {
 
 	// Get theme options from database.
-	$theme_options = tortuga_theme_options();
+	$theme_options = test_theme_options();
 
 	// Return early if site title is deactivated.
 	if ( false == $theme_options['site_title'] ) {
@@ -52,14 +52,14 @@ function tortuga_site_title() {
 endif;
 
 
-if ( ! function_exists( 'tortuga_site_description' ) ) :
+if ( ! function_exists( 'test_site_description' ) ) :
 /**
  * Displays the site description in the header area
  */
-function tortuga_site_description() {
+function test_site_description() {
 
 	// Get theme options from database.
-	$theme_options = tortuga_theme_options();
+	$theme_options = test_theme_options();
 
 	// Return early if site title is deactivated.
 	if ( false == $theme_options['site_description'] ) {
@@ -79,14 +79,14 @@ function tortuga_site_description() {
 endif;
 
 
-if ( ! function_exists( 'tortuga_header_image' ) ) :
+if ( ! function_exists( 'test_header_image' ) ) :
 /**
  * Displays the custom header image below the navigation menu
  */
-function tortuga_header_image() {
+function test_header_image() {
 
 	// Get theme options from database.
-	$theme_options = tortuga_theme_options();
+	$theme_options = test_theme_options();
 
 	// Display featured image as header image on static pages.
 	if ( get_header_image() ) :
@@ -120,14 +120,14 @@ function tortuga_header_image() {
 endif;
 
 
-if ( ! function_exists( 'tortuga_post_image' ) ) :
+if ( ! function_exists( 'test_post_image' ) ) :
 /**
  * Displays the featured image on archive posts.
  *
  * @param string $size Post thumbnail size.
  * @param array  $attr Post thumbnail attributes.
  */
-function tortuga_post_image( $size = 'post-thumbnail', $attr = array() ) {
+function test_post_image( $size = 'post-thumbnail', $attr = array() ) {
 
 	// Display Post Thumbnail.
 	if ( has_post_thumbnail() ) : ?>
@@ -138,18 +138,18 @@ function tortuga_post_image( $size = 'post-thumbnail', $attr = array() ) {
 
 	<?php endif;
 
-} // tortuga_post_image()
+} // test_post_image()
 endif;
 
 
-if ( ! function_exists( 'tortuga_post_image_single' ) ) :
+if ( ! function_exists( 'test_post_image_single' ) ) :
 /**
  * Displays the featured image on single posts
  */
-function tortuga_post_image_single() {
+function test_post_image_single() {
 
 	// Get theme options from database.
-	$theme_options = tortuga_theme_options();
+	$theme_options = test_theme_options();
 
 	// Display Post Thumbnail if activated.
 	if ( true === $theme_options['post_image_single'] ) :
@@ -158,46 +158,46 @@ function tortuga_post_image_single() {
 
 	endif;
 
-} // tortuga_post_image_single()
+} // test_post_image_single()
 endif;
 
 
-if ( ! function_exists( 'tortuga_entry_meta' ) ) :
+if ( ! function_exists( 'test_entry_meta' ) ) :
 /**
  * Displays the date, author and categories of a post
  */
-function tortuga_entry_meta() {
+function test_entry_meta() {
 
 	// Get theme options from database.
-	$theme_options = tortuga_theme_options();
+	$theme_options = test_theme_options();
 
 	$postmeta = '';
 
 	// Display date unless user has deactivated it via settings.
 	if ( true === $theme_options['meta_date'] ) {
 
-		$postmeta .= tortuga_meta_date();
+		$postmeta .= test_meta_date();
 
 	}
 
 	// Display author unless user has deactivated it via settings.
 	if ( true === $theme_options['meta_author'] ) {
 
-		$postmeta .= tortuga_meta_author();
+		$postmeta .= test_meta_author();
 
 	}
 
 	// Display categories unless user has deactivated it via settings.
 	if ( true === $theme_options['meta_category'] ) {
 
-		$postmeta .= tortuga_meta_category();
+		$postmeta .= test_meta_category();
 
 	}
 
 	// Display categories unless user has deactivated it via settings.
 	if ( true === $theme_options['meta_comments'] ) {
 
-		$postmeta .= tortuga_meta_comments();
+		$postmeta .= test_meta_comments();
 
 	}
 
@@ -207,15 +207,15 @@ function tortuga_entry_meta() {
 
 	}
 
-} // tortuga_entry_meta()
+} // test_entry_meta()
 endif;
 
 
-if ( ! function_exists( 'tortuga_meta_date' ) ) :
+if ( ! function_exists( 'test_meta_date' ) ) :
 /**
  * Displays the post date
  */
-function tortuga_meta_date() {
+function test_meta_date() {
 
 	$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
 		esc_url( get_permalink() ),
@@ -226,51 +226,51 @@ function tortuga_meta_date() {
 
 	return '<span class="meta-date">' . $time_string . '</span>';
 
-}  // tortuga_meta_date()
+}  // test_meta_date()
 endif;
 
 
-if ( ! function_exists( 'tortuga_meta_author' ) ) :
+if ( ! function_exists( 'test_meta_author' ) ) :
 /**
  * Displays the post author
  */
-function tortuga_meta_author() {
+function test_meta_author() {
 
 	$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'tortuga' ), get_the_author() ) ),
+		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'test' ), get_the_author() ) ),
 		esc_html( get_the_author() )
 	);
 
 	return '<span class="meta-author"> ' . $author_string . '</span>';
 
-}  // tortuga_meta_author()
+}  // test_meta_author()
 endif;
 
 
-if ( ! function_exists( 'tortuga_meta_category' ) ) :
+if ( ! function_exists( 'test_meta_category' ) ) :
 /**
  * Displays the category of posts
  */
-function tortuga_meta_category() {
+function test_meta_category() {
 
 	return '<span class="meta-category"> ' . get_the_category_list( ', ' ) . '</span>';
 
-} // tortuga_meta_category()
+} // test_meta_category()
 endif;
 
 
-if ( ! function_exists( 'tortuga_meta_comments' ) ) :
+if ( ! function_exists( 'test_meta_comments' ) ) :
 /**
  * Displays the post comments
  */
-function tortuga_meta_comments() {
+function test_meta_comments() {
 
 	// Start Output Buffering.
 	ob_start();
 
 	// Display Comments.
-	comments_popup_link( esc_html__( 'Leave a comment', 'tortuga' ), esc_html__( 'One comment', 'tortuga' ), esc_html__( '% comments', 'tortuga' ) );
+	comments_popup_link( esc_html__( 'Leave a comment', 'test' ), esc_html__( 'One comment', 'test' ), esc_html__( '% comments', 'test' ) );
 	$comments = ob_get_contents();
 
 	// End Output Buffering.
@@ -278,18 +278,18 @@ function tortuga_meta_comments() {
 
 	return '<span class="meta-comments"> ' . $comments . '</span>';
 
-} // tortuga_meta_comments()
+} // test_meta_comments()
 endif;
 
 
-if ( ! function_exists( 'tortuga_entry_tags' ) ) :
+if ( ! function_exists( 'test_entry_tags' ) ) :
 /**
  * Displays the post tags on single post view
  */
-function tortuga_entry_tags() {
+function test_entry_tags() {
 
 	// Get theme options from database.
-	$theme_options = tortuga_theme_options();
+	$theme_options = test_theme_options();
 
 	// Get tags.
 	$tag_list = get_the_tag_list( '', '' );
@@ -306,38 +306,38 @@ function tortuga_entry_tags() {
 	<?php
 	endif;
 
-} // tortuga_entry_tags()
+} // test_entry_tags()
 endif;
 
 
-if ( ! function_exists( 'tortuga_more_link' ) ) :
+if ( ! function_exists( 'test_more_link' ) ) :
 /**
  * Displays the more link on posts
  */
-function tortuga_more_link() {
+function test_more_link() {
 	?>
 
-	<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Continue reading &raquo;', 'tortuga' ); ?></a>
+	<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Continue reading &raquo;', 'test' ); ?></a>
 
 	<?php
 }
 endif;
 
 
-if ( ! function_exists( 'tortuga_post_navigation' ) ) :
+if ( ! function_exists( 'test_post_navigation' ) ) :
 /**
  * Displays Single Post Navigation
  */
-function tortuga_post_navigation() {
+function test_post_navigation() {
 
 	// Get theme options from database.
-	$theme_options = tortuga_theme_options();
+	$theme_options = test_theme_options();
 
 	if ( true === $theme_options['post_navigation'] ) {
 
 		the_post_navigation( array(
-			'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'tortuga' ) . '</span>%title',
-			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'tortuga' ) . '</span>%title',
+			'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'test' ) . '</span>%title',
+			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'test' ) . '</span>%title',
 		) );
 
 	}
@@ -346,11 +346,11 @@ function tortuga_post_navigation() {
 endif;
 
 
-if ( ! function_exists( 'tortuga_breadcrumbs' ) ) :
+if ( ! function_exists( 'test_breadcrumbs' ) ) :
 /**
  * Displays ThemeZee Breadcrumbs plugin
  */
-function tortuga_breadcrumbs() {
+function test_breadcrumbs() {
 
 	if ( function_exists( 'themezee_breadcrumbs' ) ) {
 
@@ -364,11 +364,11 @@ function tortuga_breadcrumbs() {
 endif;
 
 
-if ( ! function_exists( 'tortuga_related_posts' ) ) :
+if ( ! function_exists( 'test_related_posts' ) ) :
 /**
  * Displays ThemeZee Related Posts plugin
  */
-function tortuga_related_posts() {
+function test_related_posts() {
 
 	if ( function_exists( 'themezee_related_posts' ) ) {
 
@@ -383,11 +383,11 @@ function tortuga_related_posts() {
 endif;
 
 
-if ( ! function_exists( 'tortuga_pagination' ) ) :
+if ( ! function_exists( 'test_pagination' ) ) :
 /**
  * Displays pagination on archive pages
  */
-function tortuga_pagination() {
+function test_pagination() {
 
 	global $wp_query;
 
@@ -398,8 +398,8 @@ function tortuga_pagination() {
 		'format' => '?paged=%#%',
 		'current' => max( 1, get_query_var( 'paged' ) ),
 		'total' => $wp_query->max_num_pages,
-		'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'tortuga' ) . '</span>&raquo;',
-		'prev_text' => '&laquo<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'tortuga' ) . '</span>',
+		'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'test' ) . '</span>&raquo;',
+		'prev_text' => '&laquo<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'test' ) . '</span>',
 		'add_args' => false,
 	) );
 
@@ -413,23 +413,23 @@ function tortuga_pagination() {
 	<?php
 	endif;
 
-} // tortuga_pagination()
+} // test_pagination()
 endif;
 
 
 /**
  * Displays credit link on footer line
  */
-function tortuga_footer_text() {
+function test_footer_text() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'tortuga' ),
+		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'test' ),
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="https://themezee.com/themes/tortuga/" title="Tortuga WordPress Theme">Tortuga</a>'
+			'<a href="https://themezee.com/themes/test/" title="test WordPress Theme">test</a>'
 		); ?>
 	</span>
 
 	<?php
 }
-add_action( 'tortuga_footer_text', 'tortuga_footer_text' );
+add_action( 'test_footer_text', 'test_footer_text' );

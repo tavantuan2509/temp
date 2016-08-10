@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the slideshow loop
  *
- * @package Tortuga
+ * @package test
  */
 
 ?>
@@ -12,7 +12,7 @@
 	<?php // Display Post Thumbnail or default thumbnail.
 	if ( has_post_thumbnail() ) :
 
-		the_post_thumbnail( 'tortuga-slider-image', array( 'class' => 'slide-image' ) );
+		the_post_thumbnail( 'test-slider-image', array( 'class' => 'slide-image' ) );
 
 	else : ?>
 
@@ -24,7 +24,7 @@
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php tortuga_slider_meta(); ?>
+		<?php test_slider_meta(); ?>
 
 		<div class="entry-content clearfix">
 
@@ -32,7 +32,7 @@
 
 		</div><!-- .entry-content -->
 
-		<div class="read-more"><?php tortuga_more_link(); ?></div>
+		<div class="read-more"><?php test_more_link(); ?></div>
 
 	</div>
 

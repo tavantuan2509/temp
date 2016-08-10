@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Tortuga
+ * @package test
  */
 
 get_header();
 
 // Get Theme Options from Database.
-$theme_options = tortuga_theme_options();
+$theme_options = test_theme_options();
 ?>
 
 	<section id="primary" class="content-archive content-area">
@@ -21,7 +21,7 @@ $theme_options = tortuga_theme_options();
 
 			<header class="page-header">
 
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'tortuga' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'test' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 				<p><?php get_search_form(); ?></p>
 
 			</header><!-- .page-header -->
@@ -44,7 +44,7 @@ $theme_options = tortuga_theme_options();
 
 			</div>
 
-			<?php tortuga_pagination(); ?>
+			<?php test_pagination(); ?>
 
 		<?php
 		else :

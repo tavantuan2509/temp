@@ -2,20 +2,20 @@
 /**
  * The template for displaying single posts
  *
- * @package Tortuga
+ * @package test
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php tortuga_post_image_single(); ?>
+	<?php test_post_image_single(); ?>
 
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-		<?php tortuga_entry_meta(); ?>
+		<?php test_entry_meta(); ?>
 
 	</header><!-- .entry-header -->
 
@@ -24,7 +24,7 @@
 		<?php the_content(); ?>
 
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tortuga' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'test' ),
 			'after'  => '</div>',
 		) ); ?>
 
@@ -32,8 +32,8 @@
 
 	<footer class="entry-footer">
 
-		<?php tortuga_entry_tags(); ?>
-		<?php tortuga_post_navigation(); ?>
+		<?php test_entry_tags(); ?>
+		<?php test_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
 

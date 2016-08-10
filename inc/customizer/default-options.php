@@ -4,7 +4,7 @@
  *
  * Uses sane defaults in case the user has not configured any theme options yet.
  *
- * @package Tortuga
+ * @package test
  */
 
 /**
@@ -12,10 +12,10 @@
  *
  * @return array
  */
-function tortuga_theme_options() {
+function test_theme_options() {
 
 	// Merge theme options array from database with default options array.
-	$theme_options = wp_parse_args( get_option( 'tortuga_theme_options', array() ), tortuga_default_options() );
+	$theme_options = wp_parse_args( get_option( 'test_theme_options', array() ), test_default_options() );
 
 	// Return theme options.
 	return $theme_options;
@@ -28,7 +28,7 @@ function tortuga_theme_options() {
  *
  * @return array
  */
-function tortuga_default_options() {
+function test_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,

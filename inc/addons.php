@@ -2,16 +2,16 @@
 /**
  * Add Support for Theme Addons
  *
- * @package Tortuga
+ * @package test
  */
 
 /**
  * Register support for Jetpack and theme addons
  */
-function tortuga_theme_addons_setup() {
+function test_theme_addons_setup() {
 
 	// Add theme support for Anderson Pro plugin.
-	add_theme_support( 'tortuga-pro' );
+	add_theme_support( 'test-pro' );
 
 	// Add theme support for ThemeZee Plugins.
 	add_theme_support( 'themezee-widget-bundle' );
@@ -24,18 +24,18 @@ function tortuga_theme_addons_setup() {
 		'container'      => 'post-wrapper',
 		'footer_widgets' => array( 'footer-left', 'footer-center-left', 'footer-center-right', 'footer-right' ),
 		'wrapper'        => false,
-		'render'         => 'tortuga_infinite_scroll_render',
+		'render'         => 'test_infinite_scroll_render',
 		'posts_per_page' => 6,
 	) );
 
 }
-add_action( 'after_setup_theme', 'tortuga_theme_addons_setup' );
+add_action( 'after_setup_theme', 'test_theme_addons_setup' );
 
 
 /**
  * Load custom stylesheets for theme addons
  */
-function tortuga_theme_addons_scripts() {
+function test_theme_addons_scripts() {
 
 	// Load widget bundle styles if widgets are active.
 	if ( is_active_widget( 'TZWB_Facebook_Likebox_Widget', false, 'tzwb-facebook-likebox' )
@@ -59,13 +59,13 @@ function tortuga_theme_addons_scripts() {
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'tortuga_theme_addons_scripts' );
+add_action( 'wp_enqueue_scripts', 'test_theme_addons_scripts' );
 
 
 /**
  * Add custom image sizes for theme addons
  */
-function tortuga_theme_addons_image_sizes() {
+function test_theme_addons_image_sizes() {
 
 	// Add Widget Bundle thumbnail.
 	add_image_size( 'tzwb-thumbnail', 90, 65, true );
@@ -74,13 +74,13 @@ function tortuga_theme_addons_image_sizes() {
 	add_image_size( 'themezee-related-posts', 480, 320, true );
 
 }
-add_action( 'after_setup_theme', 'tortuga_theme_addons_image_sizes' );
+add_action( 'after_setup_theme', 'test_theme_addons_image_sizes' );
 
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function tortuga_infinite_scroll_render() {
+function test_infinite_scroll_render() {
 
 	while ( have_posts() ) {
 		the_post();

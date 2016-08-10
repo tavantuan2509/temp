@@ -1,6 +1,6 @@
-=== Tortuga ===
+=== test ===
 Author URI: https://themezee.com
-Theme URI: https://themezee.com/themes/tortuga/
+Theme URI: https://themezee.com/themes/test/
 Contributors: themezee
 Tags: two-columns, light, purple, custom-background, custom-header, custom-menu, editor-style, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
 Requires at least: 4.4
@@ -8,20 +8,20 @@ Tested up to: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website.
+test is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website.
 
 == Description ==
 
-Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
+test is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of test are the beautiful post slider and header widgets area. Arrr!
 
-For more information about Tortuga please go to https://themezee.com/themes/tortuga/
+For more information about test please go to https://themezee.com/themes/test/
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Tortuga in the search form and press the 'Enter' key on your keyboard.
+2. Type in test in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://themezee.com/docs/tortuga-documentation/ for a guide on how to customize this theme.
+4. Go to https://themezee.com/docs/test-documentation/ for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
@@ -87,8 +87,8 @@ Initial Release
 
 == Copyright ==
 
-Tortuga WordPress Theme, Copyright 2016 ThemeZee.com
-Tortuga is distributed under the terms of the GNU GPL
+test WordPress Theme, Copyright 2016 ThemeZee.com
+test is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -102,7 +102,7 @@ GNU General Public License for more details.
 
 == Ressources ==
 
-Tortuga bundles the following third-party resources:
+test bundles the following third-party resources:
 
 1. Genericons Icon Font - http://genericons.com
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)

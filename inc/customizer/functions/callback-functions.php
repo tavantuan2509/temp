@@ -5,7 +5,7 @@
  * Used to determine whether an option setting is displayed or not.
  * Called via the active_callback parameter of the add_control() function
  *
- * @package Tortuga
+ * @package test
  */
 
 /**
@@ -14,10 +14,10 @@
  * @param object $control / Instance of the Customizer Control.
  * @return bool
  */
-function tortuga_control_post_content_callback( $control ) {
+function test_control_post_content_callback( $control ) {
 
 	// Check if excerpt mode is selected.
-	if ( 'excerpt' === $control->manager->get_setting( 'tortuga_theme_options[post_content]' )->value() ) :
+	if ( 'excerpt' === $control->manager->get_setting( 'test_theme_options[post_content]' )->value() ) :
 		return true;
 	else :
 		return false;
@@ -32,12 +32,12 @@ function tortuga_control_post_content_callback( $control ) {
  * @param object $control / Instance of the Customizer Control.
  * @return bool
  */
-function tortuga_slider_activated_callback( $control ) {
+function test_slider_activated_callback( $control ) {
 
 	// Check if Slider is turned on.
-	if ( true === $control->manager->get_setting( 'tortuga_theme_options[slider_blog]' )->value() ) :
+	if ( true === $control->manager->get_setting( 'test_theme_options[slider_blog]' )->value() ) :
 		return true;
-	elseif ( true === $control->manager->get_setting( 'tortuga_theme_options[slider_magazine]' )->value() ) :
+	elseif ( true === $control->manager->get_setting( 'test_theme_options[slider_magazine]' )->value() ) :
 		return true;
 	else :
 		return false;

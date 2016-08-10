@@ -5,13 +5,13 @@
  * Display the latest posts from a selected category in a boxed layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
- * @package Tortuga
+ * @package test
  */
 
 /**
  * Magazine Widget Class
  */
-class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
+class test_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -20,11 +20,11 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 		// Setup Widget.
 		parent::__construct(
-			'tortuga-magazine-posts-boxed', // ID.
-			sprintf( esc_html__( 'Magazine Posts: Boxed (%s)', 'tortuga' ), wp_get_theme()->Name ), // Name.
+			'test-magazine-posts-boxed', // ID.
+			sprintf( esc_html__( 'Magazine Posts: Boxed (%s)', 'test' ), wp_get_theme()->Name ), // Name.
 			array(
-				'classname' => 'tortuga-magazine-posts-boxed',
-				'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'tortuga' ),
+				'classname' => 'test-magazine-posts-boxed',
+				'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'test' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -69,7 +69,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 		// Get Widget Object Cache.
 		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_tortuga_magazine_posts_boxed', 'widget' );
+			$cache = wp_cache_get( 'widget_test_magazine_posts_boxed', 'widget' );
 		}
 		if ( ! is_array( $cache ) ) {
 			$cache = array();
@@ -110,7 +110,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 		// Set Cache.
 		if ( ! $this->is_preview() ) {
 			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_tortuga_magazine_posts_boxed', $cache, 'widget' );
+			wp_cache_set( 'widget_test_magazine_posts_boxed', $cache, 'widget' );
 		} else {
 			ob_end_flush();
 		}
@@ -174,7 +174,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 		if ( $posts_query->have_posts() ) :
 
 			// Limit the number of words for the excerpt.
-			add_filter( 'excerpt_length', 'tortuga_magazine_posts_excerpt_length' );
+			add_filter( 'excerpt_length', 'test_magazine_posts_excerpt_length' );
 
 			// Display Posts.
 			while ( $posts_query->have_posts() ) :
@@ -185,7 +185,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
 
-						<?php tortuga_post_image( 'tortuga-thumbnail-large' ); ?>
+						<?php test_post_image( 'test-thumbnail-large' ); ?>
 
 						<div class="post-content">
 
@@ -199,7 +199,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 							<div class="entry-content">
 								<?php the_excerpt(); ?>
-								<?php tortuga_more_link(); ?>
+								<?php test_more_link(); ?>
 							</div><!-- .entry-content -->
 
 						</div>
@@ -212,7 +212,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'medium-post clearfix' ); ?>>
 
-						<?php tortuga_post_image( 'tortuga-thumbnail-medium' ); ?>
+						<?php test_post_image( 'test-thumbnail-medium' ); ?>
 
 						<div class="medium-post-content">
 
@@ -234,7 +234,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 			<?php
 			// Remove excerpt filter.
-			remove_filter( 'excerpt_length', 'tortuga_magazine_posts_excerpt_length' );
+			remove_filter( 'excerpt_length', 'test_magazine_posts_excerpt_length' );
 
 		endif;
 
@@ -266,7 +266,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 		if ( $posts_query->have_posts() ) :
 
 			// Limit the number of words for the excerpt.
-			add_filter( 'excerpt_length', 'tortuga_magazine_posts_excerpt_length' );
+			add_filter( 'excerpt_length', 'test_magazine_posts_excerpt_length' );
 
 			// Display Posts.
 			while ( $posts_query->have_posts() ) :
@@ -279,7 +279,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 						<header class="entry-header">
 
-							<?php tortuga_post_image( 'tortuga-thumbnail-large' ); ?>
+							<?php test_post_image( 'test-thumbnail-large' ); ?>
 
 							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
@@ -289,7 +289,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 						<div class="entry-content">
 							<?php the_excerpt(); ?>
-							<?php tortuga_more_link(); ?>
+							<?php test_more_link(); ?>
 						</div><!-- .entry-content -->
 
 					</article>
@@ -300,7 +300,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
 
-						<?php tortuga_post_image( 'tortuga-thumbnail-small' ); ?>
+						<?php test_post_image( 'test-thumbnail-small' ); ?>
 
 						<div class="small-post-content">
 
@@ -322,7 +322,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 			<?php
 			// Remove excerpt filter.
-			remove_filter( 'excerpt_length', 'tortuga_magazine_posts_excerpt_length' );
+			remove_filter( 'excerpt_length', 'test_magazine_posts_excerpt_length' );
 
 		endif;
 
@@ -343,13 +343,13 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 
 		if ( true === $settings['meta_date'] ) {
 
-			$postmeta .= tortuga_meta_date();
+			$postmeta .= test_meta_date();
 
 		}
 
 		if ( true === $settings['meta_author'] ) {
 
-			$postmeta .= tortuga_meta_author();
+			$postmeta .= test_meta_author();
 
 		}
 
@@ -379,7 +379,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 			if ( $settings['category'] > 0 ) :
 
 				// Set Link URL and Title for Category.
-				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'tortuga' ), get_cat_name( $settings['category'] ) );
+				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'test' ), get_cat_name( $settings['category'] ) );
 				$link_url = esc_url( get_category_link( $settings['category'] ) );
 
 				// Display Widget Title with link to category archive.
@@ -432,16 +432,16 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 		$settings = wp_parse_args( $instance, $this->default_settings() );
 ?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'tortuga' ); ?>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'test' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $settings['title']; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'tortuga' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'test' ); ?></label><br/>
 			<?php // Display Category Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'tortuga' ),
+					'show_option_all'    => esc_html__( 'All Categories', 'test' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $settings['category'],
@@ -453,24 +453,24 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Post Layout:', 'tortuga' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Post Layout:', 'test' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'layout' ); ?>" name="<?php echo $this->get_field_name( 'layout' ); ?>">
-				<option <?php selected( $settings['layout'], 'horizontal' ); ?> value="horizontal" ><?php esc_html_e( 'Horizontal Arrangement', 'tortuga' ); ?></option>
-				<option <?php selected( $settings['layout'], 'vertical' ); ?> value="vertical" ><?php esc_html_e( 'Vertical Arrangement', 'tortuga' ); ?></option>
+				<option <?php selected( $settings['layout'], 'horizontal' ); ?> value="horizontal" ><?php esc_html_e( 'Horizontal Arrangement', 'test' ); ?></option>
+				<option <?php selected( $settings['layout'], 'vertical' ); ?> value="vertical" ><?php esc_html_e( 'Vertical Arrangement', 'test' ); ?></option>
 			</select>
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ); ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
-				<?php esc_html_e( 'Display post date', 'tortuga' ); ?>
+				<?php esc_html_e( 'Display post date', 'test' ); ?>
 			</label>
 		</p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ); ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
-				<?php esc_html_e( 'Display post author', 'tortuga' ); ?>
+				<?php esc_html_e( 'Display post author', 'test' ); ?>
 			</label>
 		</p>
 
@@ -483,7 +483,7 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 	 */
 	public function delete_widget_cache() {
 
-		wp_cache_delete( 'widget_tortuga_magazine_posts_boxed', 'widget' );
+		wp_cache_delete( 'widget_test_magazine_posts_boxed', 'widget' );
 
 	}
 }
@@ -491,9 +491,9 @@ class Tortuga_Magazine_Posts_Boxed_Widget extends WP_Widget {
 /**
  * Register Widget
  */
-function tortuga_register_magazine_posts_boxed_widget() {
+function test_register_magazine_posts_boxed_widget() {
 
-	register_widget( 'Tortuga_Magazine_Posts_Boxed_Widget' );
+	register_widget( 'test_Magazine_Posts_Boxed_Widget' );
 
 }
-add_action( 'widgets_init', 'tortuga_register_magazine_posts_boxed_widget' );
+add_action( 'widgets_init', 'test_register_magazine_posts_boxed_widget' );

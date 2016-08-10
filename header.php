@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Tortuga
+ * @package test
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -22,9 +22,9 @@
 
         <div id="page" class="hfeed site">
 
-            <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'tortuga'); ?></a>
+            <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'test'); ?></a>
 
-            <div id="header-top" class="header-bar-wrap"><?php do_action('tortuga_header_bar'); ?></div>
+            <div id="header-top" class="header-bar-wrap"><?php do_action('test_header_bar'); ?></div>
 
             <header id="masthead" class="site-header clearfix" role="banner">
 
@@ -32,9 +32,9 @@
 
                     <div id="logo" class="site-branding clearfix">
 
-                        <?php tortuga_site_logo(); ?>
-                        <?php tortuga_site_title(); ?>
-                        <?php tortuga_site_description(); ?>
+                        <?php test_site_logo(); ?>
+                        <?php test_site_title(); ?>
+                        <?php test_site_description(); ?>
 
                     </div><!-- .site-branding -->
 
@@ -58,14 +58,14 @@
                     <nav id="main-navigation" class="primary-navigation navigation container clearfix" role="navigation">
                         <?php
                         // Display Main Navigation.
-                        wp_nav_menu(array(
-                            'theme_location' => 'secondary',
-                            'container' => false,
-                            'menu_class' => 'main-navigation-menu',
-                            'echo' => true,
-                            'fallback_cb' => 'tortuga_default_menu',
-                                )
-                        );
+//                        wp_nav_menu(array(
+//                            'theme_location' => 'secondary',
+//                            'container' => false,
+//                            'menu_class' => 'main-navigation-menu',
+//                            'echo' => true,
+//                            'fallback_cb' => 'test_default_menu',
+//                                )
+//                        );
                         ?>
                     </nav><!-- #main-navigation -->
 
@@ -73,8 +73,8 @@
 
             </header><!-- #masthead -->
 
-            <?php tortuga_breadcrumbs(); ?>
+            <?php test_breadcrumbs(); ?>
 
-            <?php tortuga_header_image(); ?>
+            <?php test_header_image(); ?>
 
             <div id="content" class="site-content container clearfix">

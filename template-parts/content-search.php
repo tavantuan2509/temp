@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the search loop
  *
- * @package Tortuga
+ * @package test
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 		</div><!-- .entry-content -->
 
-		<div class="read-more"><?php tortuga_more_link(); ?></div>
+		<div class="read-more"><?php test_more_link(); ?></div>
 
 	</article>
 

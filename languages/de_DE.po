@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes + Pro Versions + Add-ons package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tortuga\n"
+"Project-Id-Version: test\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2016-05-04 11:13+0100\n"
 "PO-Revision-Date: 2016-05-04 11:16+0100\n"
@@ -180,8 +180,8 @@ msgid "Theme Links"
 msgstr "Theme Links"
 
 #: inc/theme-info.php:50 inc/customizer/customizer.php:137
-msgid "https://themezee.com/themes/tortuga/"
-msgstr "https://themezee.com/de/themes/tortuga/"
+msgid "https://themezee.com/themes/test/"
+msgstr "https://themezee.com/de/themes/test/"
 
 #: inc/theme-info.php:50 inc/customizer/customizer.php:138
 msgid "Theme Page"
@@ -197,8 +197,8 @@ msgstr "Theme Demo"
 
 #: inc/theme-info.php:53 inc/theme-info.php:74
 #: inc/customizer/customizer.php:139
-msgid "https://themezee.com/docs/tortuga-documentation/"
-msgstr "https://themezee.com/de/docs/tortuga-dokumentation/"
+msgid "https://themezee.com/docs/test-documentation/"
+msgstr "https://themezee.com/de/docs/test-dokumentation/"
 
 #: inc/theme-info.php:53 inc/theme-info.php:68
 #: inc/customizer/customizer.php:140
@@ -262,8 +262,8 @@ msgstr ""
 "erweiterte Anpassungsmöglichkeiten."
 
 #: inc/theme-info.php:120 inc/customizer/functions/custom-controls.php:101
-msgid "https://themezee.com/addons/tortuga-pro/"
-msgstr "https://themezee.com/de/addons/tortuga-pro/"
+msgid "https://themezee.com/addons/test-pro/"
+msgstr "https://themezee.com/de/addons/test-pro/"
 
 #: inc/theme-info.php:121 inc/customizer/functions/custom-controls.php:102
 #, php-format
@@ -580,10 +580,10 @@ msgid "Display post excerpt"
 msgstr "Zeige Beitragsauszug"
 
 #~ msgid ""
-#~ "Tortuga requires at least WordPress version 4.2. You are running version "
+#~ "test requires at least WordPress version 4.2. You are running version "
 #~ "%s. Please upgrade and try again."
 #~ msgstr ""
-#~ "Tortuga benötigt mindestens WordPress Version 4.2. Du verwendest Version "
+#~ "test benötigt mindestens WordPress Version 4.2. Du verwendest Version "
 #~ "%s. Bitte führe ein Update durch und versuche es erneut."
 
 #~ msgid "Read more"
